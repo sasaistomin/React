@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="main"></div>
+
+<script type="text/babel">
+    const fioclass = "div";
+
+    let mystyle = {
+        fontfamily:"Verdana",
+        border:"2px solid black",
+        padding:"10px",
+        width:"300px"
+    }
+    let photo = {
+        width:"200px"
+    }
+
+    let div = document.getElementById("main");
+
+    const root = ReactDOM.createRoot(div);
+    root.render(<div className={fioclass} style = {mystyle}>
+        <h1>Istomin Sasha</h1>
+        <h2>+380660643466</h2>
+        <h2>sasaistomin42@gmail.com</h2>
+        <img style = {photo} src="https://metodsistema.ru/wp-content/uploads/2021/02/Inside-Magritte-emotion-exibition-alla-Fabbrica-del-Vapore.jpg" alt=""></img>
+    </div>);
+</script>
+</body>
+</html>

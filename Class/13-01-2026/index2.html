@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="main"></div>
+
+
+<script type="text/babel">
+    const cityclass = "div";
+    let div = document.getElementById("main");
+    const root = ReactDOM.createRoot(div);
+
+    let citystyle = {
+        display:"block",
+        fontSize:"30px",
+        textAlign:"center",
+        border:"2px solid black",
+        width:"500px"
+    }
+
+    root.render(
+        <div className = {cityclass} style = {citystyle}>
+            <p>Odessa</p>
+            <p>UKRAINA</p>
+            <p>2 сентября 1794 г.</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Odesa-Montage-2016.png/330px-Odesa-Montage-2016.png" alt=""></img>
+        </div>
+    )
+</script>
+</body>
+</html>
