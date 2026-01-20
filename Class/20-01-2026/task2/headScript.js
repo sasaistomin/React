@@ -32,18 +32,18 @@ let mainStyle = {
     gap: "15px"
 }
 
-
+let navHeaderStyle = {
+    display: "flex",
+    gap: "15px"
+}
 
 function Header() {
     return (
         <header style={headerStyle}>
             <img
-                src="https://i.pinimg.com/736x/c8/46/b4/c846b4083c41820fd4b35cd440428582.jpg"
-                alt="V-Mart Logo"
-                style={headerImgStyle}
-            />
+                src="https://i.pinimg.com/736x/c8/46/b4/c846b4083c41820fd4b35cd440428582.jpg" alt="V-Mart Logo" style={headerImgStyle}/>
             <h1>V-Mart</h1>
-            <nav style={{ display: "flex", gap: "15px" }}>
+            <nav style={navHeaderStyle}>
                 <a href="#main">Main</a>
                 <a href="#contacts">Contacts</a>
             </nav>
@@ -55,7 +55,7 @@ function BodyMain() {
     return (
         <div style={mainContainerStyle}>
             <nav style={sidebarStyle}>
-                <h3 style={{fontSize: "1.1rem"}}>Categories</h3>
+                <h3 style={{fontSize: "20px"}}>Categories</h3>
                 <a href="">Техніка для дому</a>
                 <a href="">Електроніка</a>
                 <a href="">Догляд за собою</a>
@@ -63,19 +63,16 @@ function BodyMain() {
             </nav>
 
             <div style={mainStyle}>
-                <ProductCard name="Product 1" price="1000₴" />
-                <ProductCard name="Product 2" price="1500₴" />
+                <div style={{ border: "1px solid #eee", padding: "10px", textAlign: "center" }}>
+                    <img src="https://content.rozetka.com.ua/goods/images/big/603192630.jpg" style={{ width: "100%", height: "150px", background: "#eee" }}></img>
+                    <p>ыва</p>
+                    <p>ыва</p>
+                </div>
+                <div style={{ border: "1px solid #eee", padding: "10px", textAlign: "center" }}>
+                    <img src="https://content.rozetka.com.ua/goods/images/big/631340288.jpg" style={{width: "100%", height: "150px", background: "#eee"}}></img>
+                    <p>Sharp MS252AE Black</p>
+                    <p>3 199₴</p>
+                </div>
             </div>
         </div>
-    );
-}
-
-function ProductCard({ name, price }) {
-    return (
-        <div style={{ border: "1px solid #eee", padding: "10px", textAlign: "center" }}>
-            <div style={{ width: "100%", height: "150px", background: "#eee" }}>Image Placeholder</div>
-            <p><strong>{name}</strong></p>
-            <p>{price}</p>
-        </div>
-    );
-}
+)}
