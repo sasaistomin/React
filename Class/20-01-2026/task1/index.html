@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        function MyDiv() {
+            return <div>
+                       <h1>Hello World</h1>
+                   </div>
+        }
+
+        function MyFooter() {
+            let footerStyle = {
+                border: '1px solid black',
+                width: '100%',
+                borderRadius: '10px',
+                backgroundColor: 'yellow',
+                paddingLeft: '10px',
+            }
+
+            return <div style={footerStyle}>
+                <h1>Footer</h1>
+            </div>
+        }
+    </script>
+</head>
+<body>
+    <div id="main"></div>
+
+
+    <script type="text/babel" src="script.js"></script>
+</body>
+</html>
