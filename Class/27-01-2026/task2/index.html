@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="reset.css">
+    <script type="text/babel">
+        function Card(props) {
+            return <div id="card">
+                <div id="acsHead">
+                    <p id="acs">{props.acs}</p>
+                    <p id="head">❤️</p>
+                </div>
+                <p id="vesu">⚖️</p>
+                <img src={props.img}/>
+                <p id="name">{props.name}</p>
+                <div id="nameIcon">
+                    <p>{props.price}</p>
+                    <img src={props.icon}/>
+                </div>
+                <div id="smart">
+                    <p>Безкоштовна доставка</p>
+                    <img src="https://iprop-ua.com/tm/thumbs/e9zq4qty.jpg"/>
+                </div>
+
+            </div>
+        }
+
+        function CardLine() {
+            return <div id="container">
+                <Card img="https://content1.rozetka.com.ua/goods/images/big/468886072.jpg" name="Apple AirPods" price="7 399₴" icon="https://cdn-icons-png.flaticon.com/128/711/711897.png" acs="10%"/>
+                <Card img="https://content1.rozetka.com.ua/goods/images/big/449730711.jpg" name="Samsung Galaxy Buds3 Pro" price="6 999₴" icon="https://cdn-icons-png.flaticon.com/128/711/711897.png" acs="31%"/>
+                <Card img="https://content1.rozetka.com.ua/goods/images/big/594443651.jpg" name="Apple AirPods Pro" price="14 099₴" icon="https://cdn-icons-png.flaticon.com/128/711/711897.png" acs="5%"/>
+                <Card img="https://content2.rozetka.com.ua/goods/images/big/595477906.jpg" name="Anker SoundСore" price="3 699₴" icon="https://cdn-icons-png.flaticon.com/128/711/711897.png" acs="40%"/>
+                <Card img="https://content1.rozetka.com.ua/goods/images/big/525674462.jpg" name="Motorola Moto Buds" price="1 599₴" icon="https://cdn-icons-png.flaticon.com/128/711/711897.png"acs="90%"/>
+            </div>
+        }
+    </script>
+</head>
+<body>
+    <div id="main"></div>
+
+    <script type="text/babel">
+        let div = document.getElementById('main');
+        const root = ReactDOM.createRoot(div);
+
+        root.render(
+            <>
+                <CardLine/>
+            </>
+        )
+
+    </script>
+</body>
+</html>

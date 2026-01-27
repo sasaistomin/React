@@ -1,0 +1,70 @@
+#card {
+    margin: 25px 0 0 0;
+    width: 200px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#card img {
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+#container {
+    margin-left: 100px;
+    display: flex;
+    gap: 15px;
+}
+
+#nameIcon {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nameIcon img {
+    margin-top: 8px;
+    width: 20px;
+    height: 20px;
+}
+
+#name {
+    text-align: center;
+}
+
+#acsHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#acs {
+    color: #ffa903;
+    padding: 3px;
+    border-radius: 5px;
+    background-color: #cc0000;
+}
+
+#vesu {
+    font-size: 20px;
+    float: right;
+
+}
+
+#smart {
+    display: flex;
+    gap: 10px;
+}
+
+#smart img {
+    width: 50px;
+}
+
+#smart p {
+    margin: 5px 0 0 0;
+    font-size: 11px;
+    color: #14a24a;
+}
