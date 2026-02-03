@@ -1,0 +1,18 @@
+.headerStyle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.headerImgStyle {
+    width: 100px;
+    border-radius: 8px;
+}
+
+
+.navHeaderStyle {
+    display: flex;
+    gap: 15px;
+}
