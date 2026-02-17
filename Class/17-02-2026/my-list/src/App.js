@@ -1,6 +1,7 @@
 import './App.css';
 import Navigation from './components/MyList/MyList';
 import Gallery from "./components/Gallery/Gallery";
+import Table from "./components/UserTable/UserTable";
 
 const menuItems = [
     { id: 1, label: "Main" },
@@ -14,11 +15,19 @@ const galleryItems = [
     {id: 3, url: "https://www.5.ua/media/pictures/original/294300.jpg?t=1725796642", title: "photo 3", autor: "Kiril" }
 ]
 
+const userTable = [
+    {id: 1, name: "Olga", age: 20, city: "Kev"},
+    {id: 2, name: "Igor", age: 20, city: "Odessa"},
+    {id: 3, name: "Lena", age: 20, city: "Lvov"},
+    {id: 3, name: "Jordan", age: 10, city: "Jordan"},
+]
+
 function App() {
     return (
         <div className="App">
             <Navigation items={menuItems} activeId={2} />
-            <Gallery items={galleryItems}/>
+            <Gallery items={galleryItems} />
+            <Table items={userTable}/>
         </div>
     );
 }
