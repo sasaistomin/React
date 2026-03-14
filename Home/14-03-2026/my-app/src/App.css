@@ -1,0 +1,30 @@
+.app-wrapper {
+    min-height: 100vh;
+
+}
+
+.app-wrapper.light {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.app-wrapper.dark {
+    background-color: #202124;
+    color: #ffffff;
+}
+
+.main-container {
+    display: flex;
+    border-top: 1px solid #ccc;
+    min-height: 70vh;
+}
+
+.sidebar {
+    width: 200px;
+    border-right: 1px solid #ccc;
+    padding: 10px;
+}
+
+.content {
+    padding: 20px;
+}

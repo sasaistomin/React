@@ -1,0 +1,50 @@
+#text
+{  
+    display: flex;
+    width: 50%;
+    border: 1px solid black;
+    margin-top: 100px;
+    margin-left: 50px;
+
+ }
+
+ button
+ {
+    margin-left: 50px;
+ }
+
+ .Light
+ {
+background-color: rgb(250, 246, 246);
+color:rgb(6, 5, 5);
+ }
+
+ .Dark
+ {
+background-color: rgb(72, 69, 69);
+color:white;
+
+ }
+ .button
+ {
+    background-color: aquamarine;
+ }
+
+ .headerStyle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.headerImgStyle {
+    width: 100px;
+    border-radius: 8px;
+}
+
+
+.navHeaderStyle {
+    display: flex;
+    gap: 15px;
+}
