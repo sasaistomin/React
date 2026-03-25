@@ -1,0 +1,63 @@
+/* Общие стили для центрирования */
+.app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.4s ease;
+}
+
+/* Стили самой карточки */
+.card {
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    background: white;
+    /* Цвет по умолчанию */
+    color: #333;
+}
+
+/* --- ТЕМЫ --- */
+
+.light {
+    background-color: #f0f2f5;
+}
+
+.dark {
+    background-color: #121212;
+}
+
+.dark .card {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.solarized {
+    background-color: #002b36;
+}
+
+.solarized .card {
+    background-color: #073642;
+    color: #93a1a1;
+    border: 1px solid #586e75;
+}
+
+/* Кнопка */
+.theme-button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    transition: opacity 0.2s;
+}
+
+.theme-button:hover {
+    opacity: 0.8;
+}
