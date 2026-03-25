@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import './card.module.css'; // Импортируем стили напрямую
+import './card.module.css';
 
 const Card = () => {
-    // Состояние для тем: 'light', 'dark', 'solarized'
     const [theme, setTheme] = useState('light');
 
     const toggleTheme = () => {
@@ -12,7 +11,6 @@ const Card = () => {
     };
 
     return (
-        // Применяем динамический класс темы к обертке
         <div className={`app-container ${theme}`}>
             <div className="card">
                 <h1>Текущая тема: {theme}</h1>
