@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>React JSX (без состояния)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- React 18 -->
+  <script src = "https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src = "https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  
+  <!-- Babel для JSX -->
+  <script src = "https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    :root { --brand:#0f62fe; --bg:#f5f7fb; --card:#fff; --line:#e6e8ef; }
+    body { margin:0; font-family:system-ui, Arial, sans-serif; background:var(--bg); color:#222; }
+    header, footer { background:var(--brand); color:#fff; padding:16px 20px; }
+    nav { background:#e8eefc; padding:10px 20px; border-bottom:1px solid #d5ddf6; }
+    .layout { display:grid; grid-template-columns: 1fr 260px; gap:20px; padding:20px; }
+    @media (max-width: 800px) { .layout { grid-template-columns:1fr; } }
+    .main, .sidebar, .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; }
+    .cards { display:grid; gap:12px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+    .card h3 { margin:0 0 6px; }
+    .muted { color:#596072; }
+    .badge { background:#ebf1ff; border:1px solid #d5e3ff; padding:2px 8px; border-radius:999px; color:var(--brand); font-size:12px; }
+    a { color:var(--brand); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+  </style>
+</head>
+<body>
+
+  <div id="root"></div>
+
+  <script type="text/babel">
+
+    const Header = ({ version, subtitle }) => (
+      <header>
+        <h1 style={{ margin: 0 }}>MyApp <span className="badge">{version}</span></h1>
+        <div className="muted">{subtitle}</div>
+      </header>
+    );
+
+    const Nav = ({ items }) => (
+      <nav>
+        <strong>Навигация: </strong>
+        {items.map((item, i) => (
+          <a key={i} href={item.href} style={{ marginRight: 12 }}>
+            {item.label}
+          </a>
+        ))}
+      </nav>
+    );
+
+    const Card = ({ title, children }) => (
+      <div className="card">
+        <h3>{title}</h3>
+        <div className="muted">{children}</div>
+      </div>
+    );
+
+    const Main = () => (
+      <main className="main">
+        <h2>Главная область</h2>
+        <p>Макет страницы на React + JSX (без состояния).</p>
+
+        <div className="cards">
+          <Card title="Карточка 1">Простой текст в карточке.</Card>
+          <Card title="Карточка 2">Компонент можно переиспользовать.</Card>
+          <Card title="Карточка 3">JSX упрощает структуру.</Card>
+          <Card title="Карточка 4">Всё без useState.</Card>
+        </div>
+      </main>
+    );
+
+    const Sidebar = ({ sections }) => (
+      <aside className="sidebar">
+        <h3>Боковая панель</h3>
+        <ul>
+          {sections.map((s, i) => (
+            <li key={i}>
+              <a href={s.href}>{s.label}</a>
+            </li>
+          ))}
+        </ul>
+      </aside>
+    );
+
+    const Footer = () => (
+      <footer>
+        © {new Date().getFullYear()} MyApp — учебный макет
+      </footer>
+    );
+
+    const Layout = () => {
+      const navItems = [
+        { label: "Домой", href: "#" },
+        { label: "Компоненты", href: "#components" },
+        { label: "Контакты", href: "#contacts" }
+      ];
+
+      const sidebarLinks = [
+        { label: "Документация", href: "#docs" },
+        { label: "Быстрый старт", href: "#start" },
+        { label: "О проекте", href: "#about" }
+      ];
+
+      return (
+        <>
+          <Header version="v1.0" subtitle="Макет страницы на React (JSX)" />
+          <Nav items={navItems} />
+          <div className="layout">
+            <Main />
+            <Sidebar sections={sidebarLinks} />
+          </div>
+          <Footer />
+        </>
+      );
+    };
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<Layout />);
+
+  </script>
+
+</body>
+</html>
