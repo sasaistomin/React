@@ -1,0 +1,22 @@
+import { Outlet, Link } from 'react-router-dom';
+
+export const Layout = () => {
+  return (
+    <div className="app-grid">
+      <header>Мой Магазин</header>
+      <div className="main-content">
+        <aside>
+          <nav>
+            <ul>
+              <li><Link to="/">Главная</Link></li>
+            </ul>
+          </nav>
+        </aside>
+        <main>
+          <Outlet />
+        </main>
+      </div>
+      <footer>Подвал сайта 2026</footer>
+    </div>
+  );
+};
