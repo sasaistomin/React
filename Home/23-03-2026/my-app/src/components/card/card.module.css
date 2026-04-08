@@ -7,7 +7,7 @@
     transition: background-color 0.4s ease;
 }
 
-/* Стили самой карточки */
+
 .card {
     padding: 40px;
     border-radius: 20px;
@@ -15,11 +15,8 @@
     text-align: center;
     transition: all 0.3s ease;
     background: white;
-    /* Цвет по умолчанию */
     color: #333;
 }
-
-/* --- ТЕМЫ --- */
 
 .light {
     background-color: #f0f2f5;
